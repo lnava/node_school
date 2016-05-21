@@ -4,14 +4,14 @@ var fs = require('fs');
 var path = require('path');
 
 //make sure we recieved the proper number of arguments
-if (process.argv.length != 4){
+if (process.argv.length !== 4){
 	return console.error(path.basename(process.argv[1]) + ": Incorrect number of arguments");
 }
 //assign commandline args to variables
 var dirPath = process.argv[2];
 var ext = process.argv[3];
 //add leading '.' to ext if it is not already there
-if (ext[0] != '.'){
+if (ext[0] !== '.'){
 	ext = '.' + ext;
 }
 
