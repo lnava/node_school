@@ -13,14 +13,14 @@ module.exports = function filtered_ls(dirname, ext, callback){
 
 		//iterate over data and add matches to return array
 		var ret=[];
-		data.forEach(function(elem){
+		data.forEach(function(elem, index){
 			if(path.extname(elem) === ext){
 				ret.push(elem); //remove a single element from array
 			}
 		});
 		
 		//return resulting data array to callback function
-		callback(null, ret);
+		callback(null, data);
 	});
 }
 
